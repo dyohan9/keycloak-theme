@@ -1,0 +1,9 @@
+keycloak:
+  image: quay.io/keycloak/keycloak:11.0.2
+  ports:
+  - "8080:8080"
+  volumes:
+  - ./themes/oerworldmap-keycloak-theme/:/opt/jboss/keycloak/themes/oerworldmap-keycloak-theme/
+  environment:
+    KEYCLOAK_USER: "admin"
+    KEYCLOAK_PASSWORD: "admin"
